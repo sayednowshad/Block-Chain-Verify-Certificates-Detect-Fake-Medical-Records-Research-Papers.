@@ -21,6 +21,7 @@ public class CertificateController {
     private CertificateRepository repo;
 
     // 🔄 UPLOAD endpoint
+    @CrossOrigin(origins = "http://localhost:5173")
     @PostMapping
     public ResponseEntity<?> uploadCertificate(
             @RequestParam("file") MultipartFile file,
