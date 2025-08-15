@@ -52,7 +52,7 @@ public class CertificateController {
         boolean isValid = blockchainService.verifyData(fileHash);
 
         if (isValid) {
-            return ResponseEntity.ok("✔ Certificate is VALID");
+            return ResponseEntity.ok("✅ Certificate is VALID");
         } else {
             return ResponseEntity.status(403).body("❌ FAKE or NOT Verified");
         }
