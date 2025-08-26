@@ -1,6 +1,7 @@
 package com.blockchain.blockchain.model;
 
 import java.time.Instant;
+
 import org.apache.commons.codec.digest.DigestUtils;
 
 public class Block {
@@ -9,6 +10,8 @@ public class Block {
     private String data;
     private String previousHash;
     private String hash;
+     // store large text
+
 
     public Block(int index, String data, String previousHash) {
         this.index = index;
