@@ -38,9 +38,7 @@ public class CertificateController {
         cert.setEmail(email);
         cert.setFileHash(fileHash);
         cert.setTimestamp(block.getTimestamp());
-
         repo.save(cert);
-
         return ResponseEntity.ok("✅ Certificate Block Added!");
     }
 
@@ -52,9 +50,9 @@ public class CertificateController {
         boolean isValid = blockchainService.verifyData(fileHash);
 
         if (isValid) {
-            return ResponseEntity.ok("✅ Certificate is VALID");
+            return ResponseEntity.ok("✔️ Certificate is VALID");
         } else {
-            return ResponseEntity.status(403).body("❌ FAKE or NOT Verified");
+            return ResponseEntity.status(403).body(" ❌ Doc is Not Verified");
         }
     }
 
